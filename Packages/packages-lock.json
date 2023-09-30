@@ -16,6 +16,16 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.film-internal-utilities": {
+      "version": "0.18.4-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0",
+        "com.unity.timeline": "1.2.18"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.ide.visualstudio": {
       "version": "2.0.21",
       "depth": 0,
@@ -70,6 +80,13 @@
         "com.unity.searcher": "4.9.2"
       }
     },
+    "com.unity.springbone": {
+      "version": "https://github.com/unity3d-jp/UnityChanSpringBone.git#0da293c6d55857f282c193be5e6948004b061543",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "0da293c6d55857f282c193be5e6948004b061543"
+    },
     "com.unity.test-framework": {
       "version": "1.1.33",
       "depth": 0,
@@ -99,6 +116,16 @@
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.toonshader": {
+      "version": "0.9.5-preview",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.film-internal-utilities": "0.18.4-preview",
+        "com.unity.render-pipelines.core": "10.0.0"
       },
       "url": "https://packages.unity.com"
     },
