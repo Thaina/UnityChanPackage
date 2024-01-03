@@ -672,12 +672,42 @@ ModelImporter:
   - first:
       137: 13700006
     second: yuko_head
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_def_mat
+    second: {fileID: 2100000, guid: ce9b602d55170fa409f30db6a07c102f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_nol_mat
+    second: {fileID: 2100000, guid: ce9b602d55170fa409f30db6a07c102f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_skin_mat
+    second: {fileID: 2100000, guid: f0dd3d20f834ba24187b2243edf18176, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yu_hair_mat
+    second: {fileID: 2100000, guid: 771afd8de717985489c233a2d6cd3182, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yu_mouth_mat
+    second: {fileID: 2100000, guid: 771afd8de717985489c233a2d6cd3182, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Yu_skin_mat
+    second: {fileID: 2100000, guid: 420340eb1d273974f994fed7a218927f, type: 2}
   materials:
-    materialImportMode: 0
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

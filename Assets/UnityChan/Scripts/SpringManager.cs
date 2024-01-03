@@ -12,6 +12,13 @@
 using UnityEngine;
 using System.Collections;
 
+#if UNITY_EDITOR
+using UnityEditor;
+
+using System.Linq;
+using SpringBones = Unity.Animations.SpringBones;
+#endif
+
 namespace UnityChan
 {
 	public class SpringManager : MonoBehaviour
@@ -33,6 +40,7 @@ namespace UnityChan
 		}
 
 #if UNITY_EDITOR
+		[ContextMenu(nameof(UpdateParameters))]
 		void Update ()
 		{
 
@@ -82,5 +90,57 @@ namespace UnityChan
 			}
 			#endif
 		}
+
+#if UNITY_EDITOR
+		[ContextMenu(nameof(UpgradeToSpringBonePackage))]
+		void UpgradeToSpringBonePackage()
+		{
+			if(!(gameObject.TryGetComponent(out SpringBones.SpringManager newSpringManager) && newSpringManager))
+				newSpringManager = gameObject.AddComponent<SpringBones.SpringManager>();
+
+			newSpringManager.dynamicRatio = dynamicRatio;
+
+			var colliders = gameObject.GetComponentsInChildren<SpringCollider>();
+			foreach(var collider in colliders)
+			{
+				if(collider.gameObject.TryGetComponent(out SpringBones.SpringSphereCollider springSphereCollider) && springSphereCollider)
+					continue;
+
+				springSphereCollider = collider.gameObject.AddComponent<SpringBones.SpringSphereCollider>();
+				springSphereCollider.radius = collider.radius;
+			}
+
+			newSpringManager.springBones = springBones.Select((springBone) => {
+				if(springBone.gameObject.TryGetComponent(out SpringBones.SpringBone newSpringBone) && newSpringBone)
+					return newSpringBone;
+					
+				newSpringBone = springBone.gameObject.AddComponent<SpringBones.SpringBone>();
+
+				newSpringBone.stiffnessForce = springBone.stiffnessForce * 700 / 0.01f;
+				
+				newSpringBone.dragForce = springBone.dragForce;
+				newSpringBone.springForce = springBone.springForce * 1000;
+
+				newSpringBone.radius = springBone.radius;
+
+				newSpringBone.sphereColliders = springBone.colliders.Select((collider) => {
+					return collider.gameObject.GetComponent<SpringBones.SpringSphereCollider>();
+				}).ToArray();
+
+				return newSpringBone;
+			}).ToArray();
+
+			foreach(var collider in colliders)
+				GameObject.DestroyImmediate(collider);
+
+			foreach(var springBone in gameObject.GetComponentsInChildren<SpringBone>())
+				GameObject.DestroyImmediate(springBone);
+
+			foreach(var randomWind in gameObject.GetComponentsInChildren<RandomWind>())
+				GameObject.DestroyImmediate(randomWind);
+
+			GameObject.DestroyImmediate(this);
+		}
+#endif
 	}
 }

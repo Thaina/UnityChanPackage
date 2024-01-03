@@ -780,12 +780,52 @@ ModelImporter:
   - first:
       137: 13700010
     second: utc_head
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_def_mat
+    second: {fileID: 2100000, guid: ce9b602d55170fa409f30db6a07c102f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_nol_mat
+    second: {fileID: 2100000, guid: ce9b602d55170fa409f30db6a07c102f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_skin_mat
+    second: {fileID: 2100000, guid: f0dd3d20f834ba24187b2243edf18176, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: def_mat
+    second: {fileID: 2100000, guid: 0d580611565b0bd4faee18bf01d52a6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair_mat
+    second: {fileID: 2100000, guid: 0d580611565b0bd4faee18bf01d52a6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouth_mat
+    second: {fileID: 2100000, guid: 3dd705f8c4fc1c84a8fd7b19a77e9e58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nol_mat
+    second: {fileID: 2100000, guid: f26f0515c4d81fc4fb64630434b45017, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin_mat
+    second: {fileID: 2100000, guid: 0d580611565b0bd4faee18bf01d52a6b, type: 2}
   materials:
-    materialImportMode: 0
-    materialName: 0
-    materialSearch: 1
-    materialLocation: 0
+    materialImportMode: 1
+    materialName: 1
+    materialSearch: 2
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

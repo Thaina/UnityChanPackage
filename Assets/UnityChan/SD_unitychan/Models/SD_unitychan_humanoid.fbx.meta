@@ -840,12 +840,37 @@ ModelImporter:
   - first:
       137: 13700010
     second: _head
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: def_mat
+    second: {fileID: 2100000, guid: 33617e2203e55fa46801e063486b59f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hair_mat
+    second: {fileID: 2100000, guid: 787cbe8c6e6ebf74e856c2ccb3eb1923, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouth_mat
+    second: {fileID: 2100000, guid: 09608bb10cbd4714a94445805ab7a652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nol_mat
+    second: {fileID: 2100000, guid: a172534e4207dec438dea0e660e996a7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skin_mat
+    second: {fileID: 2100000, guid: b87a4da61900d68429a41bed3ea42d16, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0

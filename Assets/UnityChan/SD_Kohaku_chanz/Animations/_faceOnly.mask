@@ -109,7 +109,7 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_Spine2/Character1_Neck/Character1_Head
     m_Weight: 0
-  - m_Path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_Spine2/Character1_Neck/Character1_Head/_face
+  - m_Path: utc_face
     m_Weight: 1
   - m_Path: Character1_Reference/Character1_Hips/Character1_Spine/Character1_Spine1/Character1_Spine2/Character1_Neck/Character1_Head/bone_eye_L
     m_Weight: 0
@@ -263,15 +263,13 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Character1_Reference/Character1_Hips/J_R_SkirtBack_01/J_R_SkirtBack_02
     m_Weight: 0
-  - m_Path: Mesh_SD_unitychan
+  - m_Path: _body
     m_Weight: 0
-  - m_Path: Mesh_SD_unitychan/_body
+  - m_Path: _eye
     m_Weight: 0
-  - m_Path: Mesh_SD_unitychan/_eye
+  - m_Path: _Fhair
     m_Weight: 0
-  - m_Path: Mesh_SD_unitychan/_Fhair
+  - m_Path: _Fhair2
     m_Weight: 0
-  - m_Path: Mesh_SD_unitychan/_Fhair2
-    m_Weight: 0
-  - m_Path: Mesh_SD_unitychan/_head
+  - m_Path: _head
     m_Weight: 0

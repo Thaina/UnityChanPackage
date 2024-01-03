@@ -972,12 +972,42 @@ ModelImporter:
   - first:
       137: 13700006
     second: misaki_head
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mi_hair_mat
+    second: {fileID: 2100000, guid: bd25e9626a9fe2b47b38d0b579c18c6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mi_mouth_mat
+    second: {fileID: 2100000, guid: bd25e9626a9fe2b47b38d0b579c18c6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mi_skin_mat
+    second: {fileID: 2100000, guid: 4a84cf09ecccfc9449565d5dcd601773, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_def_mat
+    second: {fileID: 2100000, guid: ce9b602d55170fa409f30db6a07c102f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_nol_mat
+    second: {fileID: 2100000, guid: ce9b602d55170fa409f30db6a07c102f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SB_skin_mat
+    second: {fileID: 2100000, guid: f0dd3d20f834ba24187b2243edf18176, type: 2}
   materials:
-    materialImportMode: 0
+    materialImportMode: 1
     materialName: 0
-    materialSearch: 1
-    materialLocation: 0
+    materialSearch: 2
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
