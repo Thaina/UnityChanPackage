@@ -37,7 +37,7 @@ AnimatorController:
   - serializedVersion: 5
     m_Name: face
     m_StateMachine: {fileID: 110719848}
-    m_Mask: {fileID: 101100000, guid: dc9bc119158348c4796584d639efe163, type: 2}
+    m_Mask: {fileID: 101100000, guid: 2d4e0e0d2eda147be851af6d686de166, type: 2}
     m_Motions: []
     m_Behaviours: []
     m_BlendingMode: 0

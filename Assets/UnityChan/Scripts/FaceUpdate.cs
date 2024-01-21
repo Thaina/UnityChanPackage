@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+
+using System.Linq;
 
 namespace UnityChan
 {
@@ -36,10 +37,8 @@ namespace UnityChan
 		}
 
 		float current = 0;
-
 		void Update ()
 		{
-
 			if (Input.GetMouseButton (0)) {
 				current = 1;
 			} else if (!isKeepFace) {
@@ -52,19 +51,11 @@ namespace UnityChan
 		//アニメーションEvents側につける表情切り替え用イベントコール
 		public void OnCallChangeFace (string str)
 		{   
-			int ichecked = 0;
-			foreach (var animation in animations) {
-				if (str == animation.name) {
-					ChangeFace (str);
-					break;
-				} else if (ichecked <= animations.Length) {
-					ichecked++;
-				} else {
-					//str指定が間違っている時にはデフォルトで
-					str = "default@unitychan";
-					ChangeFace (str);
-				}
-			} 
+			//str指定が間違っている時にはデフォルトで
+			if(!animations.Any((animation) => animation.name == str))
+				str = "default@unitychan";
+
+			ChangeFace (str);
 		}
 
 		void ChangeFace (string str)

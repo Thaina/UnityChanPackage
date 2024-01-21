@@ -209,7 +209,7 @@ ModelImporter:
     second: marie_eye
   - first:
       1: 100136
-    second: marie_face
+    second: _face
   - first:
       1: 100138
     second: marie_glass
@@ -539,7 +539,7 @@ ModelImporter:
     second: marie_eye
   - first:
       4: 400136
-    second: marie_face
+    second: _face
   - first:
       4: 400138
     second: marie_glass
@@ -686,7 +686,7 @@ ModelImporter:
     second: marie_eye
   - first:
       43: 4300008
-    second: marie_face
+    second: _face
   - first:
       95: 9500000
     second: //RootNode
@@ -698,7 +698,7 @@ ModelImporter:
     second: marie_eye
   - first:
       137: 13700004
-    second: marie_face
+    second: _face
   - first:
       137: 13700006
     second: marie_glass
@@ -1692,7 +1692,7 @@ ModelImporter:
       position: {x: 2.5015806e-10, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
-    - name: marie_face
+    - name: _face
       parentName: Marie_sum(Clone)
       position: {x: 2.5015806e-10, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}

@@ -1743,7 +1743,7 @@ MonoBehaviour:
   _random: 0
   _threshold: 0.5
   _interval: 10
-  isGUI: 1
+  isGUI: 0
 --- !u!114 &1551706058551816760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,7 +1778,7 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 508261753cbbd4493b10da3a43602a39, type: 2}
   delayWeight: 3
   isKeepFace: 1
-  isGUI: 1
+  isGUI: 0
 --- !u!114 &1787929625742891634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   headWeight: 0.8
   eyesWeight: 1
   clampWeight: 0.5
-  isGUI: 1
+  isGUI: 0
 --- !u!4 &6078297948653822088 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400018, guid: dd6ec75974b69a3409711f8110698bbb,

@@ -11,7 +11,7 @@ ModelImporter:
     second: akaza_eye001
   - first:
       1: 100004
-    second: akaza_face
+    second: _face
   - first:
       1: 100006
     second: akaza_Head
@@ -380,7 +380,7 @@ ModelImporter:
     second: akaza_eye001
   - first:
       4: 400004
-    second: akaza_face
+    second: _face
   - first:
       4: 400006
     second: akaza_Head
@@ -755,7 +755,7 @@ ModelImporter:
     second: _body_winter
   - first:
       43: 4300002
-    second: akaza_face
+    second: _face
   - first:
       43: 4300004
     second: akaza_eye001
@@ -779,7 +779,7 @@ ModelImporter:
     second: akaza_eye001
   - first:
       137: 13700004
-    second: akaza_face
+    second: _face
   - first:
       137: 13700006
     second: akaza_Head
@@ -1235,7 +1235,7 @@ ModelImporter:
       position: {x: 2.5015806e-10, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
-    - name: akaza_face
+    - name: _face
       parentName: Akaza_win(Clone)
       position: {x: 2.5015806e-10, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}

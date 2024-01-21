@@ -269,7 +269,7 @@ ModelImporter:
     second: misaki_eye
   - first:
       1: 100176
-    second: misaki_face
+    second: _face
   - first:
       1: 100178
     second: misaki_FHair00
@@ -740,7 +740,7 @@ ModelImporter:
     second: misaki_eye
   - first:
       4: 400176
-    second: misaki_face
+    second: _face
   - first:
       4: 400178
     second: misaki_FHair00
@@ -947,7 +947,7 @@ ModelImporter:
     second: Skirt32_R
   - first:
       43: 4300000
-    second: misaki_face
+    second: _face
   - first:
       43: 4300002
     second: misaki_eye
@@ -968,7 +968,7 @@ ModelImporter:
     second: misaki_eye
   - first:
       137: 13700004
-    second: misaki_face
+    second: _face
   - first:
       137: 13700006
     second: misaki_head
@@ -1710,7 +1710,7 @@ ModelImporter:
       position: {x: 0.0000008010864, y: 0.000001335144, z: 0.13668053}
       rotation: {x: 0.68807024, y: 0.05360729, z: 0.0443758, w: 0.7222994}
       scale: {x: 1.0000002, y: 0.9999999, z: 1.0000001}
-    - name: misaki_face
+    - name: _face
       parentName: 
       position: {x: -0, y: 0.009918099, z: -0.6672374}
       rotation: {x: 0, y: 0, z: 0, w: 1}

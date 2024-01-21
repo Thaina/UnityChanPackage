@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.unity.asset-store-tools": "https://github.com/Unity-Technologies/com.unity.asset-store-tools.git?path=/com.unity.asset-store-tools",
+    "com.unity.formats.fbx": "4.2.1",
     "com.unity.ide.visualstudio": "2.0.22",
     "com.unity.render-pipelines.universal": "14.0.9",
     "com.unity.springbone": "https://github.com/unity3d-jp/UnityChanSpringBone.git#0da293c6d55857f282c193be5e6948004b061543",

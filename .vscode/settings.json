@@ -51,5 +51,14 @@
         "temp/": true,
         "Temp/": true
     },
+    "search.exclude": {
+        "/Library/PackageCache/**": false,
+        "**/*.fbx":false,
+        "**/*.asset":false,
+        "**/*.mat":false,
+        "**/*.meta":false,
+        "**/*.prefab":false,
+        "**/*.unity":false
+    },
     "dotnet.defaultSolution": "UnityChanPackage.sln"
 }

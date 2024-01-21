@@ -359,7 +359,7 @@ ModelImporter:
     second: utc_eye
   - first:
       1: 100236
-    second: utc_face
+    second: _face
   - first:
       1: 100238
     second: utc_Fhair
@@ -728,7 +728,7 @@ ModelImporter:
     second: utc_eye
   - first:
       4: 400236
-    second: utc_face
+    second: _face
   - first:
       4: 400238
     second: utc_Fhair
@@ -743,7 +743,7 @@ ModelImporter:
     second: //RootNode
   - first:
       43: 4300000
-    second: utc_face
+    second: _face
   - first:
       43: 4300002
     second: utc_head
@@ -770,7 +770,7 @@ ModelImporter:
     second: utc_eye
   - first:
       137: 13700004
-    second: utc_face
+    second: _face
   - first:
       137: 13700006
     second: utc_Fhair
@@ -1424,7 +1424,7 @@ ModelImporter:
       position: {x: 2.5015806e-10, y: -0.00804217, z: 0.030468559}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: utc_face
+    - name: _face
       parentName: 
       position: {x: -0, y: 0.009918099, z: -0.6672374}
       rotation: {x: 0, y: 0, z: 0, w: 1}

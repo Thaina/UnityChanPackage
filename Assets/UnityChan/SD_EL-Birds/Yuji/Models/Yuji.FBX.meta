@@ -233,7 +233,7 @@ ModelImporter:
     second: yuji_eye
   - first:
       1: 100152
-    second: yuji_face
+    second: _face
   - first:
       1: 100154
     second: yuji_head
@@ -467,13 +467,13 @@ ModelImporter:
     second: yuji_eye
   - first:
       4: 400152
-    second: yuji_face
+    second: _face
   - first:
       4: 400154
     second: yuji_head
   - first:
       21: 2100000
-    second: yuji_face
+    second: _face
   - first:
       21: 2100002
     second: yuji_hair
@@ -485,7 +485,7 @@ ModelImporter:
     second: yuji_body
   - first:
       43: 4300000
-    second: yuji_face
+    second: _face
   - first:
       43: 4300002
     second: yuji_eye
@@ -509,7 +509,7 @@ ModelImporter:
     second: yuji_eye
   - first:
       137: 13700004
-    second: yuji_face
+    second: _face
   - first:
       137: 13700006
     second: yuji_head
@@ -1333,7 +1333,7 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
-    - name: yuji_face
+    - name: _face
       parentName: Yuji(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}

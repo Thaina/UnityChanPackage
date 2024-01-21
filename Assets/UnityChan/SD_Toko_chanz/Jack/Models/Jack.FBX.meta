@@ -254,7 +254,7 @@ ModelImporter:
     second: jack_eye
   - first:
       1: 100166
-    second: jack_face
+    second: _face
   - first:
       1: 100168
     second: jack_head
@@ -524,7 +524,7 @@ ModelImporter:
     second: jack_eye
   - first:
       4: 400166
-    second: jack_face
+    second: _face
   - first:
       4: 400168
     second: jack_head
@@ -545,7 +545,7 @@ ModelImporter:
     second: J_Necklace1
   - first:
       21: 2100000
-    second: jack_face
+    second: _face
   - first:
       21: 2100002
     second: jack_hair
@@ -554,7 +554,7 @@ ModelImporter:
     second: jack_body
   - first:
       43: 4300000
-    second: jack_face
+    second: _face
   - first:
       43: 4300002
     second: jack_head
@@ -578,7 +578,7 @@ ModelImporter:
     second: jack_eye
   - first:
       137: 13700004
-    second: jack_face
+    second: _face
   - first:
       137: 13700006
     second: jack_head
@@ -1461,7 +1461,7 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
-    - name: jack_face
+    - name: _face
       parentName: Jack(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}

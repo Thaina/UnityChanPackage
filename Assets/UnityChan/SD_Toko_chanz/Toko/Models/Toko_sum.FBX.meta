@@ -269,7 +269,7 @@ ModelImporter:
     second: toko_eye
   - first:
       1: 100176
-    second: toko_face
+    second: _face
   - first:
       1: 100178
     second: toko_hair00
@@ -599,7 +599,7 @@ ModelImporter:
     second: toko_eye
   - first:
       4: 400176
-    second: toko_face
+    second: _face
   - first:
       4: 400178
     second: toko_hair00
@@ -671,7 +671,7 @@ ModelImporter:
     second: toko_hair
   - first:
       21: 2100004
-    second: toko_face
+    second: _face
   - first:
       43: 4300000
     second: _body_summer
@@ -683,7 +683,7 @@ ModelImporter:
     second: toko_eye
   - first:
       43: 4300006
-    second: toko_face
+    second: _face
   - first:
       95: 9500000
     second: //RootNode
@@ -695,7 +695,7 @@ ModelImporter:
     second: toko_eye
   - first:
       137: 13700004
-    second: toko_face
+    second: _face
   - first:
       137: 13700006
     second: toko_head
@@ -1687,7 +1687,7 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
-    - name: toko_face
+    - name: _face
       parentName: Toko_sum(Clone)
       position: {x: 2.5015806e-10, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
