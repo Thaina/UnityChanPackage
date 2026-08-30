@@ -110,12 +110,12 @@ public class TransferComponentWizard : ScriptableWizard
 
 		if(from.GetComponent<SpringManager>() is var fromManager && to.GetComponent<SpringManager>() is var toManager)
 		{
-			toManager.springBones = fromManager.springBones?.Length > 0 ? fromManager.springBones.Select((springBone) => {
+			toManager.SetSpringBones(fromManager.GetSpringBones()?.Select((springBone) => {
 				var path = string.Join("/",GetRelativePath(from.transform,springBone.gameObject.transform));
 				Debug.Log(path);
 				var targetTransform = to.transform.Find(path);
 				return targetTransform.gameObject.GetComponent<SpringBone>();
-			}).ToArray() : new SpringBone[0];
+			}).ToArray() ?? new SpringBone[0]);
 		}
 
 		if(from.GetComponent<Animator>() is var fromAnimator && to.GetComponent<Animator>() is var toAnimator)

@@ -28,7 +28,7 @@ public static class SimpleFBXEditor
 	{
 		try
 		{
-			int instanceID = Selection.activeInstanceID;
+			var instanceID = Selection.activeEntityId;
 			var assetPath = Path.GetFullPath(AssetDatabase.GetAssetPath(instanceID));
 			if(!Path.GetExtension(assetPath).ToLower().EndsWith("fbx"))
 				return false;
@@ -50,40 +50,37 @@ public static class SimpleFBXEditor
 			Debug.Log(importer.GetFileHeaderInfo());
 
 			var root = fbxScene.GetRootNode();
-			
+
 			foreach(var child in Enumerable.Range(0,root.GetChildCount()).Select((i) => root.GetChild(i)))
 			{
 				Debug.LogFormat("import : {0}",child);
 
 				if(child.GetName().IndexOf("_face") > 0)
 					child.SetName("_face");
-					
-				if(child.GetName() == "_face")
+
+				if(child.GetName() != "_face")
+					continue;
+
+				int i = 0;
+				while(child.GetGeometry() is var geom && i < geom?.GetDeformerCount())
 				{
-					var count = child.GetChildCount();
-					Debug.Log("face child count : " + count);
+					var deformer = geom.GetDeformer(i);
+					i++;
 
-					int i = 0;
-					while(child.GetGeometry() is var geom && i < geom?.GetDeformerCount())
+					if(!(deformer?.GetDeformerType() == FbxDeformer.EDeformerType.eBlendShape && deformer?.GetSrcObjectCount() > 1))
+						continue;
+
+					foreach(var blendShp in Enumerable.Range(0,deformer.GetSrcObjectCount()).Select((n) => deformer.GetSrcObject(n)))
 					{
-						var deformer = geom.GetDeformer(i);
-						if(deformer?.GetDeformerType() == FbxDeformer.EDeformerType.eBlendShape && deformer?.GetSrcObjectCount() > 1)
+						string name = blendShp.GetName();
+						if(!name.ToLower().StartsWith("face."))
 						{
-							foreach(var blendShp in Enumerable.Range(0,deformer.GetSrcObjectCount()).Select((n) => deformer.GetSrcObject(n)))
-							{
-								string name = blendShp.GetName();
-								if(!name.ToLower().StartsWith("face."))
-								{
-									blendShp.SetName("face." + name);
-									Debug.Log(name + " => " + blendShp.GetName());
-								}
-							}
+							blendShp.SetName("face." + name);
+							Debug.Log(name + " => " + blendShp.GetName());
 						}
-
-						i++;
 					}
 				}
-				
+
 				Debug.LogFormat("export : {0}",child);
 			}
 
