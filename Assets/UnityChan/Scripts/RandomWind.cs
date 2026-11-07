@@ -31,7 +31,7 @@ namespace UnityChan
 		// Use this for initialization
 		void Start ()
 		{
-			springBones = GetComponent<SpringManager> ().GetSpringBones();
+			springBones = GetComponent<SpringManager> ().springBones;
 			StartCoroutine ("RandomChange");
 		}
 

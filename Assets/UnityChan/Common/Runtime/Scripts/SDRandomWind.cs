@@ -10,7 +10,7 @@ namespace UnityChan {
 public class SDRandomWind : MonoBehaviour {
     
     void Start() {
-        springBones = GetComponent<SpringManager>().GetSpringBones();
+        springBones = GetComponent<SpringManager>().springBones;
         StartCoroutine("RandomChange");
         
         InitUI();
@@ -87,7 +87,7 @@ public class SDRandomWind : MonoBehaviour {
     }
 
     void OnValidate() {
-        springBones = GetComponent<SpringManager>().GetSpringBones();
+        springBones = GetComponent<SpringManager>().springBones;
     }
  
 

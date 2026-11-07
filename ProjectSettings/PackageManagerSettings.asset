@@ -1,3 +1,4 @@
+%UNITY 7.0
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!114 &1
@@ -18,19 +19,27 @@ MonoBehaviour:
   m_SeeAllPackageVersions: 0
   m_DismissPreviewPackagesInUse: 0
   oneTimeWarningShown: 1
-  m_Registries:
-  - m_Id: main
+  oneTimePackageErrorsPopUpShown: 0
+  m_MainRegistry:
+    m_Id: main
     m_Name: 
     m_Url: https://packages.unity.com
     m_Scopes: []
     m_IsDefault: 1
+    m_IsUnityRegistry: 1
     m_Capabilities: 7
     m_ConfigSource: 0
+    m_Compliance:
+      m_Status: 0
+      m_Violations: []
+  m_ScopedRegistries: []
   m_UserSelectedRegistryName: 
   m_UserAddingNewScopedRegistry: 0
   m_RegistryInfoDraft:
     m_Modified: 0
     m_ErrorMessage: 
-    m_UserModificationsInstanceId: -834
-    m_OriginalInstanceId: -836
+    m_UserModificationsEntityId:
+      m_rawData: 1099511640400
+    m_OriginalEntityId:
+      m_rawData: 1099511640399
   m_LoadAssets: -1

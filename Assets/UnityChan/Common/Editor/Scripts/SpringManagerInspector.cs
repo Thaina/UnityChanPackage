@@ -11,7 +11,7 @@ public class SpringManagerInspector : UnityEditor.Editor {
 
         if (GUILayout.Button("Init From Children")) {
             SpringBone[] springBones = manager.GetComponentsInChildren<SpringBone>(true);
-            SerializedProperty springBonesProp = serializedObject.FindProperty(nameof(SpringManager.m_springBones));
+            SerializedProperty springBonesProp = serializedObject.FindProperty(nameof(SpringManager.springBones));
 
             springBonesProp.arraySize = springBones.Length;
             for (int i = 0; i < springBones.Length; i++) {

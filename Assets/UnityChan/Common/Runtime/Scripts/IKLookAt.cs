@@ -1,86 +1,96 @@
-﻿using System;
+﻿//
+// Mecanim.IkLookAt
+// 使用時には、AnimatorのBase LayerのIK PassをONにすること.
+//
 using UnityEngine;
-using UnityEngine.UIElements;
+using System.Collections;
 
-namespace UnityChan {
 
-[RequireComponent(typeof(Animator))]  
-public class IKLookAt : MonoBehaviour {
+namespace UnityChan
+{
 
-    void Start() {
-        
-        InitUI();
-        UpdateTargetVisibility();
-    }
+//	[RequireComponent(typeof(Animator))]  
 
-    void InitUI() {
-        if (null == m_rootUI)
-            return;
-        
-        VisualElement root = m_rootUI.rootVisualElement;
-        
-        VisualElement block = root.Q<VisualElement>("BottomRightBlock");
-        m_lookAtUIRoot = m_lookAtUITemplate.Instantiate(block);
-        
-        m_lookAtToggle = m_lookAtUIRoot.Q<Toggle>(UnityChanConstants.TOGGLE_BLOCK_UI_ELEMENT_NAME);
-        m_lookAtToggle.text = "Look at IK";
-        m_lookAtToggle.RegisterValueChangedCallback(evt => {
-            ikActive = evt.newValue;
-            UpdateTargetVisibility();
-        });
-        
-        m_lookAtUIRoot.style.display = m_showUI ? DisplayStyle.Flex : DisplayStyle.None;
-    }
+	public class IKLookAt : MonoBehaviour {
 
-    private void UpdateTargetVisibility() {
-        if (m_target) {
-            m_target.enabled = ikActive;
-        }
-    }
+        private Animator avator;
+        private MeshRenderer target = null;
+		
+		public bool ikActive = false;
+		public Transform lookAtObj = null;
+		
+		public float lookAtWeight = 1.0f;
+		public float bodyWeight = 0.3f;
+		public float headWeight = 0.8f;
+		public float eyesWeight = 1.0f;
+		public float clampWeight = 0.5f;
+        public bool isGUI = true;
 
-    void OnAnimatorIK(int layerIndex) {
-        if (!m_animator) 
-            return;
-        
-        if (ikActive) {
-            m_animator.SetLookAtWeight(lookAtWeight, bodyWeight, headWeight, eyesWeight, clampWeight);
-            if (m_target != null) {
-                m_animator.SetLookAtPosition(m_target.transform.position);
-            } else {
-                m_animator.SetLookAtWeight(0.0f);
+
+
+
+
+		// Use this for initialization
+		void Start () {
+            avator = GetComponent<Animator>();
+            if (lookAtObj != null)
+            {
+                target = lookAtObj.GetComponentInParent<MeshRenderer>();
+                target.enabled = false;
             }
-        } else {
-            m_animator.SetLookAtWeight(0.0f);
-        }
-    }
+            
+		}
 
-    void OnValidate() {
-        m_animator = GetComponent<Animator>();
-    }
+		void OnGUI()
+		{
 
-//----------------------------------------------------------------------------------------------------------------------    
+            if (isGUI)
+            {
+                Rect rect1 = new Rect(Screen.width - 120, Screen.height - 40, 100, 30);
+                //GUILayout.Label("Activate Look at IK");
+                ikActive = GUI.Toggle(rect1, ikActive, "Look at Target");
+            }
+		}
 
-    public bool ikActive = false;
-    [SerializeField] private Renderer m_target = null;
 
-    public float lookAtWeight = 1.0f;
-    public float bodyWeight = 0.3f;
-    public float headWeight = 0.8f;
-    public float eyesWeight = 1.0f;
-    public float clampWeight = 0.5f;
-
-    [SerializeField] private bool m_showUI = true;
-
-    [SerializeField] private UIDocument m_rootUI;
-    [SerializeField] private StyledUITemplate m_lookAtUITemplate;
-
-    [SerializeField] private Animator m_animator;
-
-//----------------------------------------------------------------------------------------------------------------------
-
-    VisualElement m_lookAtUIRoot;
-    Toggle m_lookAtToggle;
-    
-    
-}
+		void OnAnimatorIK(int layorIndex)
+		{		
+			if(avator)
+			{
+				if(ikActive)
+				{
+                    avator.SetLookAtWeight(lookAtWeight,bodyWeight,headWeight,eyesWeight,clampWeight);
+                    if (lookAtObj != null)
+                    {
+                        target.enabled = true;
+                        avator.SetLookAtPosition(lookAtObj.position);
+                    }
+                    else
+                    {
+                        avator.SetLookAtWeight(0.0f);
+                    }
+				}
+				else
+				{
+					avator.SetLookAtWeight(0.0f);
+				}
+			}
+		}
+		
+		void Update () 
+		{
+			if(avator)
+			{
+				if(!ikActive)
+				{
+                    if (lookAtObj != null)
+					{
+                        target.enabled = false;
+                        //Targetを消した位置に再び出したい場合には、下の行をコメントアウトする.
+                        //lookAtObj.position = avator.bodyPosition + avator.bodyRotation * new Vector3(0,0.5f,1);
+					}				
+				}
+			}		
+		}   		  
+	}
 }
